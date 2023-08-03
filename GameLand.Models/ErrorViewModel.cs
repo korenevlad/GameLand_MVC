@@ -1,4 +1,4 @@
-namespace GameLandWeb.Models
+namespace GameLand.Models
 {
     public class ErrorViewModel
     {
