@@ -55,5 +55,31 @@ namespace GameLandWeb.Areas.Admin.Controllers
             }
             else { return View(obj); }
         }
+
+
+        #region API CALLS
+
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            List<Category> categoryList = _unitOfWork.Category.GetAll().ToList();
+            return Json(new { data = categoryList });
+        }
+
+        [HttpDelete]
+        public IActionResult Delete(int? id) 
+        {
+            var obj = _unitOfWork.Category.Get(u => u.Id == id);
+            if (obj == null)
+            {
+                return Json(new { succes = false, message = "Error while deleting" });
+            }
+            _unitOfWork.Category.Remove(obj);
+            _unitOfWork.Save();
+            return Json(new { succes = true, message = "Категория удалена успешно!" });
+        }
+
+        #endregion
+
     }
 }

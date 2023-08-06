@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GameLand.DataAccess.Migrations
 {
     [DbContext(typeof(AplicationDbContext))]
-    [Migration("20230803161924_AddCategoryTable")]
-    partial class AddCategoryTable
+    [Migration("20230806120413_AddCategoryTableToDb")]
+    partial class AddCategoryTableToDb
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,6 +32,11 @@ namespace GameLand.DataAccess.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -49,66 +54,77 @@ namespace GameLand.DataAccess.Migrations
                         new
                         {
                             Id = 1,
+                            Code = "#A1",
                             Description = "null",
                             Name = "Игровые ноутбуки"
                         },
                         new
                         {
                             Id = 2,
+                            Code = "#A2",
                             Description = "null",
                             Name = "Игровые системные блоки"
                         },
                         new
                         {
                             Id = 3,
+                            Code = "#A3",
                             Description = "null",
                             Name = "Игровые мониторы"
                         },
                         new
                         {
                             Id = 4,
+                            Code = "#B1",
                             Description = "null",
                             Name = "Консоли PlayStation 5"
                         },
                         new
                         {
                             Id = 5,
+                            Code = "#B2",
                             Description = "null",
                             Name = "Игры для PlayStation 5"
                         },
                         new
                         {
                             Id = 6,
+                            Code = "#B3",
                             Description = "null",
                             Name = "Аксессуары для PlayStation 5"
                         },
                         new
                         {
                             Id = 7,
+                            Code = "#C1",
                             Description = "null",
                             Name = "Игры для PlayStation 4"
                         },
                         new
                         {
                             Id = 8,
+                            Code = "#C2",
                             Description = "null",
                             Name = "Аксессуары для PlayStation 4"
                         },
                         new
                         {
                             Id = 9,
+                            Code = "#D1",
                             Description = "null",
                             Name = "Клавиатуры"
                         },
                         new
                         {
                             Id = 10,
+                            Code = "#E1",
                             Description = "null",
                             Name = "Мышки"
                         },
                         new
                         {
                             Id = 11,
+                            Code = "#F1",
                             Description = "null",
                             Name = "Гарнитура"
                         });

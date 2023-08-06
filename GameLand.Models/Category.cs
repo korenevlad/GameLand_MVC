@@ -18,6 +18,10 @@ namespace GameLand.Models
         [DisplayName("Category Name")]
         public string Name { get; set; }
 
+        [MaxLength(50)]
+        [DisplayName("Category Code")]
+        public string Code { get; set; }
+
         [DisplayName("Category Description")]
         public string Description { get; set; }
     }

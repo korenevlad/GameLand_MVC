@@ -7,7 +7,7 @@
 namespace GameLand.DataAccess.Migrations
 {
     /// <inheritdoc />
-    public partial class AddCategoryTable : Migration
+    public partial class AddCategoryTableToDb : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -19,6 +19,7 @@ namespace GameLand.DataAccess.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
@@ -28,20 +29,20 @@ namespace GameLand.DataAccess.Migrations
 
             migrationBuilder.InsertData(
                 table: "CategoriesTable",
-                columns: new[] { "Id", "Description", "Name" },
+                columns: new[] { "Id", "Code", "Description", "Name" },
                 values: new object[,]
                 {
-                    { 1, "null", "Игровые ноутбуки" },
-                    { 2, "null", "Игровые системные блоки" },
-                    { 3, "null", "Игровые мониторы" },
-                    { 4, "null", "Консоли PlayStation 5" },
-                    { 5, "null", "Игры для PlayStation 5" },
-                    { 6, "null", "Аксессуары для PlayStation 5" },
-                    { 7, "null", "Игры для PlayStation 4" },
-                    { 8, "null", "Аксессуары для PlayStation 4" },
-                    { 9, "null", "Клавиатуры" },
-                    { 10, "null", "Мышки" },
-                    { 11, "null", "Гарнитура" }
+                    { 1, "#A1", "null", "Игровые ноутбуки" },
+                    { 2, "#A2", "null", "Игровые системные блоки" },
+                    { 3, "#A3", "null", "Игровые мониторы" },
+                    { 4, "#B1", "null", "Консоли PlayStation 5" },
+                    { 5, "#B2", "null", "Игры для PlayStation 5" },
+                    { 6, "#B3", "null", "Аксессуары для PlayStation 5" },
+                    { 7, "#C1", "null", "Игры для PlayStation 4" },
+                    { 8, "#C2", "null", "Аксессуары для PlayStation 4" },
+                    { 9, "#D1", "null", "Клавиатуры" },
+                    { 10, "#E1", "null", "Мышки" },
+                    { 11, "#F1", "null", "Гарнитура" }
                 });
         }
 
