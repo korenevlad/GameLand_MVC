@@ -27,10 +27,21 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="Customer" asp-controller="Home" asp-action="Index">Главная</a>
+                            <a class="nav-link text-white btn" asp-area="Customer" asp-controller="Home" asp-action="Index">Главная</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="Admin" asp-controller="Category" asp-action="Index">Категории</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white btn" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Управление содержанием
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item">
+                                    <a class="nav-link hoverable-text" asp-area="Admin" asp-controller="Category" asp-action="Index">Категории</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link hoverable-text" asp-area="Admin" asp-controller="Product" asp-action="Index">Товары</a>
+                                </li>
+                                <li><hr class="dropdown-divider"></li>
+                            </ul>
                         </li>
                     </ul>
 

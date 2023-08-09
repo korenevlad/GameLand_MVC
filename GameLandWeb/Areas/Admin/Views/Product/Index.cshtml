@@ -1,47 +1,45 @@
-﻿@model List<Category>
+﻿@model List<Product>
 
 <div class="card shadow border-0 mt-4">
     <div class="card-header bg-secondary bg-gradient ml-0 py-3">
         <div class="row">
             <div class="col-12 text-center">
-                <h2 class="text-white py-2">Список категорий</h2>
+                <h2 class="text-white py-2">Список товаров</h2>
             </div>
         </div>
     </div>
-
 
     <div class="card-body p-4">
         <div class="row pb-4">
             <div class="col-6">
             </div>
             <div class="col-6 text-end">
-                <a asp-area="Admin" asp-controller="Category" asp-action="Upsert" class="btn btn-primary">
-                    <i class="bi bi-plus-circle-dotted"></i> Создать новую категорию
+                <a asp-area="Admin" asp-controller="Product" asp-action="Upsert" class="btn btn-primary">
+                    <i class="bi bi-plus-circle-dotted"></i> Создать новый товар
                 </a>
             </div>
         </div>
 
-
-        <table id="tblDataCategory" class="table table-bordered table-striped">
+        <table id="tblDataProduct" class="table table-bordered table-striped">
             <thead>
                 <tr>
                     <th>Название</th>
-                    <th>Код</th>
-                    <th>Описание</th>
+                    <th>Артикул</th>
+                    <th>Цена</th>
+                    <th>Старая цена</th>
+                    <th>Категория</th>
                     <th></th>
                 </tr>
             </thead>
+
         </table>
+
+
 
     </div>
 </div>
 
-
-
 @section Scripts{
-    <script src="~/js/category_list.js"></script>
+    <script src="~/js/product_list.js"></script>
 }
-
-
-
 

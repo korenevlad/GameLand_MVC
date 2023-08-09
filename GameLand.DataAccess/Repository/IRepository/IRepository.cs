@@ -10,8 +10,8 @@ namespace GameLand.DataAccess.Repository.IRepository
     public interface IRepository<T> where T : class
     {
         void Add(T obj);
-        T Get(Expression<Func<T, bool>> filter);
-        IEnumerable<T> GetAll();
+        T Get(Expression<Func<T, bool>> filter, string? includeProperties = null);
+        IEnumerable<T> GetAll(string? includeProperties = null);
         void Remove(T obj);
     }
 }

@@ -5,21 +5,23 @@ $(document).ready(function () {
 });
 
 function loadDataTable() {
-    dataTable = $('#tblDataCategory').DataTable({
-        "ajax": { url: '/admin/category/getall' },
+    dataTable = $('#tblDataProduct').DataTable({
+        "ajax": { url: '/admin/product/getall' },
         "columns": [
-            { data: 'name', "width": "15%" },
-            { data: 'code', "width": "15%" },
-            { data: 'description', "width": "15%" },
+            { data: 'name', "width": "20%" },
+            { data: 'article', "width": "15%" },
+            { data: 'price', "width": "15%" },
+            { data: 'oldPrice', "width": "15%" },
+            { data: 'category_of_product.name', "width": "15%" },
             {
                 data: 'id',
                 "render": function (data) {
                     return `<div class="w-75 btn-group" role="group">
-                    <a href="/admin/category/upsert?id=${data}" class="btn btn-primary mx-2"> <i class="bi bi-pencil-square"></i >Обновить</a>
-                    <a onClick=Delete('/admin/category/delete/${data}') class="btn btn-danger mx-2"><i class="bi bi-trash3"></i>Удалить</a>
+                    <a href="/admin/product/upsert?id=${data}" class="btn btn-primary mx-2"> <i class="bi bi-pencil-square"></i >Обновить</a>
+                    <a onClick=Delete('/admin/product/delete/${data}') class="btn btn-danger mx-2"><i class="bi bi-trash3"></i>Удалить</a>
                     </div>`
                 },
-                "width": "15%"
+                "width": "20%"
             }
         ]
     });

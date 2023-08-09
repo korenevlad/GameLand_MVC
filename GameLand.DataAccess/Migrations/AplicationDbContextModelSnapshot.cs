@@ -126,6 +126,82 @@ namespace GameLand.DataAccess.Migrations
                             Name = "Гарнитура"
                         });
                 });
+
+            modelBuilder.Entity("GameLand.Models.Product", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Article")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageURL")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("OldPrice")
+                        .HasColumnType("float");
+
+                    b.Property<double>("Price")
+                        .HasColumnType("float");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CategoryId");
+
+                    b.ToTable("ProductTable");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Article = "A234jr2j324",
+                            CategoryId = 1,
+                            Description = "null",
+                            ImageURL = "",
+                            Name = "Ноутбук игровой Thunderobot 911 M G3 Pro JT009M00BRU",
+                            OldPrice = 129999.0,
+                            Price = 114999.0
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Article = "D8ffb7bgffsf",
+                            CategoryId = 4,
+                            Description = "null",
+                            ImageURL = "",
+                            Name = "Консоль Sony PlayStation 5 Blu-Ray Edition CFI-12(00/16/18)A",
+                            OldPrice = 0.0,
+                            Price = 59999.0
+                        });
+                });
+
+            modelBuilder.Entity("GameLand.Models.Product", b =>
+                {
+                    b.HasOne("GameLand.Models.Category", "Category_of_product")
+                        .WithMany()
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category_of_product");
+                });
 #pragma warning restore 612, 618
         }
     }
