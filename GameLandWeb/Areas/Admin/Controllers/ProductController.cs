@@ -10,10 +10,12 @@ namespace GameLandWeb.Areas.Admin.Controllers
     public class ProductController : Controller
     {
         public readonly IUnitOfWork _unitOfWork;
+        private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public ProductController(IUnitOfWork unitOfWork)
+        public ProductController(IUnitOfWork unitOfWork, IWebHostEnvironment webHostEnvironment)
         {
             _unitOfWork = unitOfWork;
+            _webHostEnvironment = webHostEnvironment;
         }
         public IActionResult Index()
         {
@@ -40,6 +42,55 @@ namespace GameLandWeb.Areas.Admin.Controllers
             else
             {
                 product_obj.Product = _unitOfWork.Product.Get(u => u.Id == id);
+                return View(product_obj);
+            }
+        }
+
+        [HttpPost]
+        public IActionResult Upsert(ProductVM product_obj, IFormFile? file)
+        {
+            if (ModelState.IsValid)
+            {
+                if (file != null)
+                {
+                    string wwwRootPath = _webHostEnvironment.WebRootPath;
+                    string fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
+                    string pathToProductImagesFolder = Path.Combine(wwwRootPath, @"images\product");
+
+                    if (!string.IsNullOrEmpty(product_obj.Product.ImageURL))
+                    {
+                        var oldImagePath = Path.Combine(wwwRootPath, product_obj.Product.ImageURL.TrimStart('\\'));
+                        if (System.IO.File.Exists(oldImagePath))
+                        {
+                            System.IO.File.Delete(oldImagePath);
+                        }
+                    }
+                    using (var fileStream = new FileStream(Path.Combine(pathToProductImagesFolder, fileName), FileMode.Create))
+                    {
+                        file.CopyTo(fileStream);
+                    }
+                    product_obj.Product.ImageURL = @"\images\product\" + fileName;
+
+
+                }
+                if(product_obj.Product.Id == 0)
+                {
+                    _unitOfWork.Product.Add(product_obj.Product);
+                    TempData["success"] = "Товар добавлен успешно!";
+                }
+                else
+                {
+                    _unitOfWork.Product.Update(product_obj.Product);
+                    TempData["success"] = "Товар обновлен успешно!";
+                }
+                _unitOfWork.Save();
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                product_obj.CategoryList = _unitOfWork.Category.GetAll().Select(u =>
+                    new SelectListItem { Text = u.Name, Value = u.Id.ToString() });
+
                 return View(product_obj);
             }
         }

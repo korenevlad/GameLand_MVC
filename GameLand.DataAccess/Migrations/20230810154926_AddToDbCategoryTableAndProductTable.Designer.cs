@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GameLand.DataAccess.Migrations
 {
     [DbContext(typeof(AplicationDbContext))]
-    [Migration("20230809200410_AddToDbCategoryTableAndProductTable")]
+    [Migration("20230810154926_AddToDbCategoryTableAndProductTable")]
     partial class AddToDbCategoryTableAndProductTable
     {
         /// <inheritdoc />
@@ -168,7 +168,7 @@ namespace GameLand.DataAccess.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("ProductTable");
+                    b.ToTable("ProductsTable");
 
                     b.HasData(
                         new

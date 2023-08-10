@@ -28,7 +28,7 @@ namespace GameLand.DataAccess.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "ProductTable",
+                name: "ProductsTable",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -43,9 +43,9 @@ namespace GameLand.DataAccess.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ProductTable", x => x.Id);
+                    table.PrimaryKey("PK_ProductsTable", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_ProductTable_CategoriesTable_CategoryId",
+                        name: "FK_ProductsTable_CategoriesTable_CategoryId",
                         column: x => x.CategoryId,
                         principalTable: "CategoriesTable",
                         principalColumn: "Id",
@@ -71,7 +71,7 @@ namespace GameLand.DataAccess.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "ProductTable",
+                table: "ProductsTable",
                 columns: new[] { "Id", "Article", "CategoryId", "Description", "ImageURL", "Name", "OldPrice", "Price" },
                 values: new object[,]
                 {
@@ -80,8 +80,8 @@ namespace GameLand.DataAccess.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_ProductTable_CategoryId",
-                table: "ProductTable",
+                name: "IX_ProductsTable_CategoryId",
+                table: "ProductsTable",
                 column: "CategoryId");
         }
 
@@ -89,7 +89,7 @@ namespace GameLand.DataAccess.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "ProductTable");
+                name: "ProductsTable");
 
             migrationBuilder.DropTable(
                 name: "CategoriesTable");

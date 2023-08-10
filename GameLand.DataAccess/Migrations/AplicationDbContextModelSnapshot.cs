@@ -165,7 +165,7 @@ namespace GameLand.DataAccess.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("ProductTable");
+                    b.ToTable("ProductsTable");
 
                     b.HasData(
                         new

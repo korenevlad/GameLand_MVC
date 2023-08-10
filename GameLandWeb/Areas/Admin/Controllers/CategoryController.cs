@@ -72,7 +72,7 @@ namespace GameLandWeb.Areas.Admin.Controllers
             var obj = _unitOfWork.Category.Get(u => u.Id == id);
             if (obj == null)
             {
-                return Json(new { succes = false, message = "Error while deleting" });
+                return Json(new { succes = false, message = "Ошибка при удалении категории!" });
             }
             _unitOfWork.Category.Remove(obj);
             _unitOfWork.Save();

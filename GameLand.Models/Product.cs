@@ -34,7 +34,7 @@ namespace GameLand.Models
         public double Price { get; set; }
 
 
-        [Range(1, 500000)]
+        [Range(0, 500000)]
         [DisplayName("Product Old Price")]
         [ValidateNever]
         public double OldPrice { get; set; }

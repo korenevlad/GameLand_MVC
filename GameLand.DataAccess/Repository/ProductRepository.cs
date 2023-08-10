@@ -19,7 +19,20 @@ namespace GameLand.DataAccess.Repository
         }
         public void Update(Product obj)
         {
-            _db.ProductTable.Update(obj);
+            var objFromDb = _db.ProductsTable.FirstOrDefault(u => u.Id == obj.Id);
+            if (objFromDb != null)
+            {
+                objFromDb.Name = obj.Name;
+                objFromDb.Article = obj.Article;
+                objFromDb.Description = obj.Description;
+                objFromDb.Price = obj.Price;
+                objFromDb.OldPrice = obj.OldPrice;
+                objFromDb.CategoryId = obj.CategoryId;
+                if (obj.ImageURL != null)
+                {
+                    objFromDb.ImageURL = obj.ImageURL;
+                }
+            }
         }
     }
 }

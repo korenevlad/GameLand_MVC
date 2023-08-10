@@ -13,7 +13,7 @@ namespace GameLand.DataAccess.Data
         public AplicationDbContext(DbContextOptions<AplicationDbContext> options) : base(options) { }
 
         public DbSet<Category> CategoriesTable { get; set; }
-        public DbSet<Product> ProductTable { get; set; }
+        public DbSet<Product> ProductsTable { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
