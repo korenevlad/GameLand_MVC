@@ -4,7 +4,7 @@
     <div class="card-header bg-secondary bg-gradient m-lg-0 py-3">
         <div class="row">
             <div class="col-12 text-center">
-                <h2 class="text-white py-2"> @(Model.Id != 0 ? "Обновление" : "Создание") категории</h2>
+                <h2 class="text-white py-2"> @(Model.Id != 0 ? "Обновление" : "Добавление") категории</h2>
             </div>
         </div>
     </div>
@@ -14,17 +14,17 @@
             <div class="border p-3">
                 @*<div asp-validation-summary="All"></div>*@
                 <div class="py-2 col-12">
-                    <label asp-for="Name" class="ms-0 badge"></label>
+                    <label asp-for="Name" class="ms-0 badge">Название</label>
                     <input asp-for="Name" autocomplete="off" class="form-control border-0 shadow" placeholder="Название" />
                     <span asp-validation-for="Name" class="text-danger"></span>
                 </div>
                 <div class="py-2 col-12">
-                    <label asp-for="Code" class="ms-0 badge"></label>
+                    <label asp-for="Code" class="ms-0 badge">Код</label>
                     <input asp-for="Code" autocomplete="off" class="form-control border-0 shadow" placeholder="Код" />
                     <span asp-validation-for="Code" class="text-danger"></span>
                 </div>
                 <div class="py-2 col-12">
-                    <label asp-for="Description" class="ms-0 badge"></label>
+                    <label asp-for="Description" class="ms-0 badge">Описание</label>
                     <textarea asp-for="Description" class="form-control border-0 shadow" placeholder="Опишите категорию или внесите какие-то пометки!
                     Если Вы не нуждаетесь в этом, впишите NULL! СОДЕРЖАНИЕ ДАННОГО ТЕКСТА БУДЕТ ВИДНО ТОЛЬКО АДМИНИСТРАТОРУ!"></textarea>
                 </div>
@@ -34,15 +34,15 @@
                     <div class="col-6 col-md-3">
                         @if (Model.Id != 0)
                         {
-                            <button type="submit" class="btn btn-primary form-control">Обновить</button>
+                            <button type="submit" class="btn btn-outline-success border form-control">Обновить</button>
                         }
                         else
                         {
-                            <button type="submit" class="btn btn-primary form-control">Создать</button>
+                            <button type="submit" class="btn btn-outline-success border form-control">Добавить</button>
                         }
                     </div>
                     <div class="col-6 col-md-3">
-                        <a asp-controller="Category" asp-action="Index" class="btn btn-outline-secondary border form-control">
+                        <a asp-controller="Category" asp-action="Index" class="btn btn-outline-danger border form-control">
                             Назад к списку
                         </a>
                     </div>

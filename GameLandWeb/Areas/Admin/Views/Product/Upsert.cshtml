@@ -1,0 +1,109 @@
+﻿@model ProductVM
+
+<div class="card shadow border-0 mt-4">
+    <div class="card-header bg-secondary bg-gradient m-lg-0 py-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="text-white py-2"> @(Model.Product.Id != 0 ? "Обновление" : "Добавление") товара</h2>
+            </div>
+        </div>
+    </div>
+    <div class="card-body p-4">
+        <form method="post" class="row" enctype="multipart/form-data">
+            <input asp-for="Product.Id" hidden />
+            <input asp-for="Product.ImageURL" hidden />
+            <div class="row">
+                <div class="col-10">
+                    <div class="border p-3">
+                        @*<div asp-validation-summary="ModelOnly"></div>*@
+                        <div class="py-2 col-12">
+                            <label asp-for="Product.Name" class="ms-0 badge">Название</label>
+                            <input asp-for="Product.Name" autocomplete="off" class="form-control border-0 shadow" placeholder="Название" />
+                            <span asp-validation-for="Product.Name" class="text-danger"></span>
+                        </div>
+
+                        <div class="py-2 col-12">
+                            <label asp-for="Product.Article" class="ms-0 badge">Артикул</label>
+                            <input asp-for="Product.Article" autocomplete="off" class="form-control border-0 shadow" placeholder="Артикул" />
+                            <span asp-validation-for="Product.Article" class="text-danger"></span>
+                        </div>
+
+                        <div class="py-2 col-12">
+                            <label asp-for="Product.Description" class="ms-0 badge">Описание</label>
+                            <textarea asp-for="Product.Description" class="form-control border-0 shadow" 
+                            placeholder="Внесите всю необходимую характеристику товара!"></textarea>
+                        </div>
+
+                        <div class="py-2 col-12">
+                            <label asp-for="Product.Price" class="ms-0 badge">Цена</label>
+                            <input asp-for="Product.Price" autocomplete="off" class="form-control border-0 shadow" placeholder="Цена" />
+                            <span asp-validation-for="Product.Price" class="text-danger"></span>
+                        </div>
+
+                        <div class="py-2 col-12">
+                            <label asp-for="Product.OldPrice" class="ms-0 badge">Старая цена</label>
+                            <input asp-for="Product.OldPrice" autocomplete="off" class="form-control border-0 shadow" placeholder="Старая цена" />
+                            <span asp-validation-for="Product.OldPrice" class="text-danger"></span>
+                        </div>
+
+                        <div class="py-2 col-12">
+                            <label asp-for="Product.CategoryId" class="ms-0 badge">Категория</label>
+                            <select asp-for="@Model.Product.CategoryId" asp-items="@Model.CategoryList" class="form-select border-0 shadow">
+                                <option disabled selected>--Выбор категории--</option>
+                            </select>
+                            <span asp-validation-for="Product.CategoryId" class="text-danger"></span>
+                        </div>
+
+
+                        <div class="py-2 col-12">
+                            <label asp-for="Product.ImageURL" class="ms-0 badge">Изображение</label>
+                            <input type="file" name="file" class="form-control border-0 shadow" />
+                        </div>
+
+
+                        <div class="row pt-2">
+                            <div class="col-6 col-md-3">
+                                @if (Model.Product.Id != 0)
+                                {
+                                    <button type="submit" class="btn btn-outline-success border form-control">Обновить</button>
+                                }
+                                else
+                                {
+                                    <button type="submit" class="btn btn-outline-success border form-control">Добавить</button>
+                                }
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <a asp-controller="Product" asp-action="Index" class="btn btn-outline-danger border form-control">
+                                    Назад к списку
+                                </a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="col-2">
+                    <img src="@Model.Product.ImageURL" width="100%"
+                         style="border-radius:5px; border:1px solid #bbb9b9" />
+                </div>
+            </div>
+           
+        </form>
+    </div>
+</div>
+
+
+
+
+@section Scripts{
+    <script>
+        tinymce.init({
+            selector: 'textarea',
+            plugins: 'anchor autolink charmap codesample emoticons  lists   table visualblocks wordcount',
+            toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough |  align lineheight | numlist bullist indent outdent',
+        });
+    </script>
+    @{
+    <partial name="_ValidationScriptsPartial"/>
+    }
+}

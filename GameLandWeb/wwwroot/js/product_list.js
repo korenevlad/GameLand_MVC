@@ -9,19 +9,19 @@ function loadDataTable() {
         "ajax": { url: '/admin/product/getall' },
         "columns": [
             { data: 'name', "width": "20%" },
-            { data: 'article', "width": "15%" },
-            { data: 'price', "width": "15%" },
-            { data: 'oldPrice', "width": "15%" },
+            { data: 'article', "width": "10%" },
+            { data: 'price', "width": "10%" },
+            { data: 'oldPrice', "width": "10%" },
             { data: 'category_of_product.name', "width": "15%" },
             {
                 data: 'id',
                 "render": function (data) {
                     return `<div class="w-75 btn-group" role="group">
-                    <a href="/admin/product/upsert?id=${data}" class="btn btn-primary mx-2"> <i class="bi bi-pencil-square"></i >Обновить</a>
-                    <a onClick=Delete('/admin/product/delete/${data}') class="btn btn-danger mx-2"><i class="bi bi-trash3"></i>Удалить</a>
+                    <a href="/admin/product/upsert?id=${data}" class="btn btn-primary mx-2"><i class="bi bi-pencil-fill"></i > Обновить</a>
+                    <a onClick=Delete('/admin/product/delete/${data}') class="btn btn-danger mx-2"><i class="bi bi-trash3"></i > Удалить</a>
                     </div>`
                 },
-                "width": "20%"
+                "width": "30%"
             }
         ]
     });
@@ -41,7 +41,7 @@ function Delete(url) {
 
     swalWithBootstrapButtons.fire({
         title: 'Вы уверены?',
-        text: "Категория будет удалена безвозвратно!",
+        text: "Товар будет удален безвозвратно!",
         icon: 'warning',
         showCancelButton: true,
         confirmButtonText: 'Удалить',
