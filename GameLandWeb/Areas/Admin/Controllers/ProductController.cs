@@ -104,6 +104,24 @@ namespace GameLandWeb.Areas.Admin.Controllers
             return Json(new { data = productList });
         }
 
+        [HttpDelete]
+        public IActionResult Delete(int? id)
+        {
+            Product productToBeDelete = _unitOfWork.Product.Get(u => u.Id == id);
+            if(productToBeDelete == null)
+            {
+                return Json(new { success = false, message = "Ошибка при удалении товара!" });
+            }
+            string oldImagePath = Path.Combine(_webHostEnvironment.WebRootPath, productToBeDelete.ImageURL.TrimStart('\\'));
+            if (System.IO.File.Exists(oldImagePath))
+            {
+                System.IO.File.Delete(oldImagePath);
+            }
+            _unitOfWork.Product.Remove(productToBeDelete);
+            _unitOfWork.Save();
+            return Json(new { success = true, message = "Товар удален успешно!" });
+        }
+
         #endregion
     }
 }
