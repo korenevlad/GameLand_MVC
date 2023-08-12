@@ -43,7 +43,7 @@ namespace GameLand.DataAccess.Data
                     Price = 114999,
                     OldPrice = 129999,
                     CategoryId = 1,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\42e671bd-1d26-4343-b859-4f39e39610b1.jpg"
                 },
                 new Product
                 {
@@ -54,7 +54,7 @@ namespace GameLand.DataAccess.Data
                     Price = 59999,
                     OldPrice = 85999,
                     CategoryId = 1,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\279ab8fe-f947-46f9-93f1-340e2fe1f25e.jpg"
                 },
                 new Product
                 {
@@ -65,7 +65,7 @@ namespace GameLand.DataAccess.Data
                     Price = 124999,
                     OldPrice = 134999,
                     CategoryId = 1,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\0d58f316-aca3-4251-87c3-90a24423fd40.jpg"
                 },
                 new Product
                 {
@@ -76,7 +76,7 @@ namespace GameLand.DataAccess.Data
                     Price = 99999,
                     OldPrice = 105999,
                     CategoryId = 1,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\1061ae0b-ea1f-493a-855a-2db6ba232fd4.jpg"
                 },
                 new Product
                 {
@@ -87,7 +87,7 @@ namespace GameLand.DataAccess.Data
                     Price = 69999,
                     OldPrice = 0,
                     CategoryId = 1,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\9a5c7945-37a3-4c9a-8f5e-0004af0be8e9.jpg"
                 },
                 new Product
                 {
@@ -98,7 +98,7 @@ namespace GameLand.DataAccess.Data
                     Price = 62999,
                     OldPrice = 69999,
                     CategoryId = 1,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\65149011-d425-4105-9606-46feab01df54.jpg"
                 },
                 new Product
                 {
@@ -109,7 +109,7 @@ namespace GameLand.DataAccess.Data
                     Price = 89999,
                     OldPrice = 111999,
                     CategoryId = 1,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\8bb94d52-a4d5-4ebc-a159-e8032cfa775f.jpg"
                 },
                 new Product
                 {
@@ -120,7 +120,7 @@ namespace GameLand.DataAccess.Data
                     Price = 364999,
                     OldPrice = 429999,
                     CategoryId = 1,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\0d1e2c6b-3b80-4e80-af0c-5d81feedecab.jpg"
                 },
                 new Product
                 {
@@ -131,7 +131,7 @@ namespace GameLand.DataAccess.Data
                     Price = 299999,
                     OldPrice = 0,
                     CategoryId = 1,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\821d9e89-7309-4e1f-9327-9f923ecfb503.jpg"
                 },
                 new Product
                 {
@@ -142,7 +142,7 @@ namespace GameLand.DataAccess.Data
                     Price = 279999,
                     OldPrice = 0,
                     CategoryId = 1,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\97cd125b-4d27-4b41-a58b-4e6abd27a275.jpg"
                 },
                 new Product
                 {
@@ -153,7 +153,7 @@ namespace GameLand.DataAccess.Data
                     Price = 229999,
                     OldPrice = 269999,
                     CategoryId = 1,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\a43d2a2d-1432-4be7-989f-ab8acee69a1f.jpg"
                 },
                 new Product
                 {
@@ -164,7 +164,7 @@ namespace GameLand.DataAccess.Data
                     Price = 219999,
                     OldPrice = 249999,
                     CategoryId = 1,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\cd6a28a8-9c77-41a2-b70a-d433357a06e2.jpg"
                 },
 
 
@@ -180,7 +180,7 @@ namespace GameLand.DataAccess.Data
                     Price = 99999,
                     OldPrice = 129999,
                     CategoryId = 2,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\761857a3-5184-4090-b72b-1768f9c41772.jpg"
                 },
                 new Product
                 {
@@ -191,7 +191,7 @@ namespace GameLand.DataAccess.Data
                     Price = 299999,
                     OldPrice = 332499,
                     CategoryId = 2,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\49ac2be4-3547-43f7-9c61-dd39cb5450be.jpg"
                 },
                 new Product
                 {
@@ -202,7 +202,7 @@ namespace GameLand.DataAccess.Data
                     Price = 247499,
                     OldPrice = 0,
                     CategoryId = 2,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\f83a65f0-134b-439d-a6a0-7e2a5a8a72ad.jpg"
                 },
                 new Product
                 {
@@ -213,7 +213,7 @@ namespace GameLand.DataAccess.Data
                     Price = 129999,
                     OldPrice = 159999,
                     CategoryId = 2,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\6b4ea99d-7c4f-495d-b042-088bd3f840c4.jpg"
                 },
                 new Product
                 {
@@ -224,7 +224,7 @@ namespace GameLand.DataAccess.Data
                     Price = 129999,
                     OldPrice = 174999,
                     CategoryId = 2,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\7606ce80-49bd-4dda-813c-3d7bc32c6975.jpg"
                 },
                 new Product
                 {
@@ -235,7 +235,7 @@ namespace GameLand.DataAccess.Data
                     Price = 299999,
                     OldPrice = 0,
                     CategoryId = 2,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\07cc637e-6cd2-477d-9b72-5b4641f37f39.jpg"
                 },
                 new Product
                 {
@@ -246,7 +246,7 @@ namespace GameLand.DataAccess.Data
                     Price = 81999,
                     OldPrice = 86999,
                     CategoryId = 2,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\12131301-6594-4936-9e85-1e9c45ae7937.jpg"
                 },
                 new Product
                 {
@@ -257,7 +257,7 @@ namespace GameLand.DataAccess.Data
                     Price = 234999,
                     OldPrice = 249999,
                     CategoryId = 2,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\3c6fadf6-2f30-4c41-97ba-93ad753d3b1b.jpg"
                 },
 
 
@@ -272,7 +272,7 @@ namespace GameLand.DataAccess.Data
                     Price = 99999,
                     OldPrice = 124999,
                     CategoryId = 3,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\dcc68fcb-4661-4099-95a1-9dff72dae6c5.jpg"
                 },
                 new Product
                 {
@@ -283,7 +283,7 @@ namespace GameLand.DataAccess.Data
                     Price = 82999,
                     OldPrice = 89999,
                     CategoryId = 3,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\6d341196-9ff3-476e-bb44-768253bee6c7.jpg"
                 },
                 new Product
                 {
@@ -294,7 +294,7 @@ namespace GameLand.DataAccess.Data
                     Price = 74999,
                     OldPrice = 79999,
                     CategoryId = 3,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\748ed21e-74c9-4d74-afab-316bc14c0597.jpg"
                 },
                 new Product
                 {
@@ -305,7 +305,7 @@ namespace GameLand.DataAccess.Data
                     Price = 37999,
                     OldPrice = 39999,
                     CategoryId = 3,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\b3a9764e-2c1d-4fbd-a4f3-ef33a6a3b86c.jpg"
                 },
                 new Product
                 {
@@ -316,7 +316,7 @@ namespace GameLand.DataAccess.Data
                     Price = 21999,
                     OldPrice = 0,
                     CategoryId = 3,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\bc8bd696-60e0-44dd-a08e-65248563ff21.jpg"
                 },
                 new Product
                 {
@@ -327,7 +327,7 @@ namespace GameLand.DataAccess.Data
                     Price = 19999,
                     OldPrice = 23999,
                     CategoryId = 3,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\abc69ff0-a2ec-42dc-9b25-38303524c7c6.jpg"
                 },
 
 
@@ -341,7 +341,7 @@ namespace GameLand.DataAccess.Data
                     Price = 59999,
                     OldPrice = 0,
                     CategoryId = 4,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\f9c6eb3d-78c4-42de-aba4-a81fc6b04835.jpg"
                 },
                 new Product
                 {
@@ -352,7 +352,7 @@ namespace GameLand.DataAccess.Data
                     Price = 52999,
                     OldPrice = 0,
                     CategoryId = 4,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\65f10155-3b20-4a05-b3e0-f42f33b953f5.jpg"
                 },
                 new Product
                 {
@@ -363,7 +363,7 @@ namespace GameLand.DataAccess.Data
                     Price = 60190,
                     OldPrice = 0,
                     CategoryId = 4,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\10215343-9415-4c9f-b184-6ea93ae3200b.jpg"
                 },
                 new Product
                 {
@@ -374,7 +374,7 @@ namespace GameLand.DataAccess.Data
                     Price = 62390,
                     OldPrice = 0,
                     CategoryId = 4,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\3f9df10a-0e34-45fa-aa07-be6440520376.jpg"
                 },
 
 
@@ -388,7 +388,7 @@ namespace GameLand.DataAccess.Data
                     Price = 2159,
                     OldPrice = 7199,
                     CategoryId = 5,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\bae42bf4-6c57-4fc2-a54a-4986145fa904.jpg"
                 },
                 new Product
                 {
@@ -399,7 +399,7 @@ namespace GameLand.DataAccess.Data
                     Price = 899,
                     OldPrice = 3199,
                     CategoryId = 5,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\ec34da26-8d70-420a-bc8a-8d43551878fa.jpg"
                 },
                 new Product
                 {
@@ -410,7 +410,7 @@ namespace GameLand.DataAccess.Data
                     Price = 5999,
                     OldPrice = 0,
                     CategoryId = 5,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\fb8da971-afe0-49dd-8843-62c2096c2677.jpg"
                 },
                 new Product
                 {
@@ -421,7 +421,7 @@ namespace GameLand.DataAccess.Data
                     Price = 8999,
                     OldPrice = 0,
                     CategoryId = 5,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\9869d232-49a6-4009-a6ad-3b193b48266a.jpg"
                 },
                 new Product
                 {
@@ -432,7 +432,7 @@ namespace GameLand.DataAccess.Data
                     Price = 9999,
                     OldPrice = 0,
                     CategoryId = 5,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\ea3dfe08-8d17-4394-8400-7c3c573db38d.jpg"
                 },
 
 
@@ -446,7 +446,7 @@ namespace GameLand.DataAccess.Data
                     Price = 1399,
                     OldPrice = 0,
                     CategoryId = 6,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\c6c055b5-b7ff-4460-a84a-697846c80dd2.jpg"
                 },
                 new Product
                 {
@@ -457,7 +457,7 @@ namespace GameLand.DataAccess.Data
                     Price = 2190,
                     OldPrice = 0,
                     CategoryId = 6,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\78656946-fa32-4ce3-9d21-1b35419cf4f8.jpg"
                 },
 
 
@@ -471,7 +471,7 @@ namespace GameLand.DataAccess.Data
                     Price = 8999,
                     OldPrice = 0,
                     CategoryId = 7,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\1bb19a42-9077-49d4-936e-daf8ee3c736f.jpg"
                 },
                 new Product
                 {
@@ -482,7 +482,7 @@ namespace GameLand.DataAccess.Data
                     Price = 5399,
                     OldPrice = 0,
                     CategoryId = 7,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\e800ecbb-d315-4a88-acaf-5515e42a5ad5.jpg"
                 },
                 new Product
                 {
@@ -493,7 +493,7 @@ namespace GameLand.DataAccess.Data
                     Price = 4299,
                     OldPrice = 0,
                     CategoryId = 7,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\ae2b4834-5360-46fb-b58e-ea9a0102dd4c.jpg"
                 },
 
 
@@ -507,7 +507,7 @@ namespace GameLand.DataAccess.Data
                     Price = 6499,
                     OldPrice = 0,
                     CategoryId = 8,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\a71f1821-fae8-41ab-9ba1-8066737addb6.jpg"
                 },
                 new Product
                 {
@@ -518,7 +518,7 @@ namespace GameLand.DataAccess.Data
                     Price = 6999,
                     OldPrice = 0,
                     CategoryId = 8,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\d194d5f1-3c84-437c-81d9-6af1a4aca615.jpg"
                 },
                 new Product
                 {
@@ -529,7 +529,7 @@ namespace GameLand.DataAccess.Data
                     Price = 1980,
                     OldPrice = 0,
                     CategoryId = 8,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\97864b5b-d5bd-4654-a971-e8e6dc6a198c.jpg"
                 },
 
 
@@ -543,7 +543,7 @@ namespace GameLand.DataAccess.Data
                     Price = 25999,
                     OldPrice = 0,
                     CategoryId = 9,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\fc12df68-cc87-416c-8644-729d338b3469.jpg"
                 },
                 new Product
                 {
@@ -554,7 +554,7 @@ namespace GameLand.DataAccess.Data
                     Price = 20499,
                     OldPrice = 0,
                     CategoryId = 9,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\7fffb182-2443-440c-8353-94262a0a195f.jpg"
                 },
                 new Product
                 {
@@ -565,7 +565,7 @@ namespace GameLand.DataAccess.Data
                     Price = 11345,
                     OldPrice = 0,
                     CategoryId = 9,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\ef005796-ef47-4619-8c82-50bd30791e95.jpg"
                 },
                 new Product
                 {
@@ -576,7 +576,7 @@ namespace GameLand.DataAccess.Data
                     Price = 6999,
                     OldPrice = 0,
                     CategoryId = 9,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\6ef5baa8-8cc5-4e76-ae8d-02248841d386.jpg"
                 },
 
 
@@ -590,7 +590,7 @@ namespace GameLand.DataAccess.Data
                     Price = 11499,
                     OldPrice = 0,
                     CategoryId = 10,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\a43c6909-c1bb-45b3-aaea-f8d6f454673f.jpg"
                 },
                 new Product
                 {
@@ -601,7 +601,7 @@ namespace GameLand.DataAccess.Data
                     Price = 6999,
                     OldPrice = 0,
                     CategoryId = 10,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\79d33e76-c25a-4097-b33d-81d51858c5dc.jpg"
                 },
                 new Product
                 {
@@ -612,7 +612,7 @@ namespace GameLand.DataAccess.Data
                     Price = 8799,
                     OldPrice = 0,
                     CategoryId = 10,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\7178780d-d0e0-4cc0-bec6-c8c79d55a5b8.jpg"
                 },
 
 
@@ -626,7 +626,7 @@ namespace GameLand.DataAccess.Data
                     Price = 17599,
                     OldPrice = 0,
                     CategoryId = 11,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\4a7fe03e-6ee1-4d97-94c9-afc68150a83c.jpg"
                 },
                 new Product
                 {
@@ -637,7 +637,7 @@ namespace GameLand.DataAccess.Data
                     Price = 11499,
                     OldPrice = 0,
                     CategoryId = 11,
-                    ImageURL = ""
+                    ImageURL = @"\images\product\7d9be698-a312-466e-bb89-f912559264a9.jpg"
                 }
                 );
         }
