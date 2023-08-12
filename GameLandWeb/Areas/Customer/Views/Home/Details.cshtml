@@ -1,0 +1,91 @@
+﻿@model Product
+<form method="post">
+    <div class="card shadow border-0 mt-4 mb-5">
+        <div class="card-header bg-secondary bg-gradient text-light py-4">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h3 class="text-white text-uppercase">@Model.Name</h3>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="py-3">
+                <div class="row">
+                    <div class="col-6 col-md-2 offset-lg-1 pb-1">
+                        <a asp-action="Index" class="btn btn-outline-primary border-0 form-control mb-5">
+                            На главную
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-3 offset-lg-1 text-center mb-3">
+                        <img src="@Model.ImageURL" width="100%" class="rounded" />
+                    </div>
+                    <div class="col-12 col-lg-6 offset-lg-1">
+        
+                        <h6 class="text-white-50 text-opacity-100">Из раздела:</h6>
+
+                        <div class="col-12 col-md-6 pb-4 ">
+                            <h4 class="text-white text-opacity-100 text">@Model.Category_of_product.Name</h4>
+                        </div>
+                        <div class="row ps-3">
+                            <h6 class="text-white text-opacity-100 ">
+                                Артикул : 
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                @Model.Article
+                            </h6>
+                        </div>
+                        <div class="row ps-3">
+                            <h6 class="text-white text-opacity-100  pb-2">
+                                Цена : 
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                @Model.Price.ToString("c")
+                            </h6>
+                        </div>
+                        @if(Model.OldPrice != 0)
+                        {
+                            <div class="row ps-3">
+                                <h6 class="text-white text-opacity-100  pb-2">
+                                    Старая Цена :
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <span class="text-decoration-line-through">
+                                        @Model.OldPrice.ToString("c")
+                                    </span>
+                                </h6>
+                            </div>
+                        }
+                        <div class="row pl-2 my-3">
+                            <p class="text-white lh-sm">@Html.Raw(@Model.Description)</p>
+                        </div>
+                        <div class="row pl-2 mb-3">
+                            <div class="col-md-4">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text bg-primary text-white text-opacity-100 border-0 fw-semibold"
+                                          id="inputGroup-sizing-default">
+                                        Количество
+                                    </span>
+                                    <input type="number" value="1" class="form-control text-end"
+                                           aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" />
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6 pb-1">
+                                <button type="submit" disabled
+                                        class="btn btn-primary bg-gradient  w-100 py-2 text-uppercase fw-semibold">
+                                    Добавить в корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+

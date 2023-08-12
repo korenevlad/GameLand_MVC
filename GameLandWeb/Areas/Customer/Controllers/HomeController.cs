@@ -23,9 +23,12 @@ namespace GameLandWeb.Areas.Customer.Controllers
             return View(productList);
         }
 
-        
+        public IActionResult Details(int? id)
+        {
+            Product product = _unitOfWork.Product.Get(u => u.Id == id, includeProperties: "Category_of_product");
+            return View(product);
+        }
 
-       
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
