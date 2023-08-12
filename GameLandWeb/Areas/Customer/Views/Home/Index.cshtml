@@ -1,8 +1,60 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model IEnumerable<Product>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="row my-4 pb-2">
+    <div class="col-2 nav-item dropdown">
+        <a class="dropdown-toggle text-white btn btn-outline-primary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Каталог товаров
+        </a>
+        <ul class="dropdown-menu">
+
+            <li class="nav-item">
+                <a class="nav-link hoverable-text text-center" asp-area="Admin" asp-controller="Category" asp-action="Index">Категории</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link hoverable-text" asp-area="Admin" asp-controller="Product" asp-action="Index">Товары</a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="row my-4 pb-5">
+    @foreach (var product in Model)
+    {
+        <div class="col-lg-4 col-sm-1">
+            <div class="row p-2">
+                <div class="col-10 p-1">
+                    <div class="card border-0 p-3 shadow border-top border-4 rounded card-fixed-height bg-gradient">
+                        <img src="@product.ImageURL" class="card-img-top rouded" />
+                        <div class="card-body pb-0">
+                            <div class="pl-1">
+                                <p class="card-title text-white  text-uppercase text-center">@product.Name</p>
+                            </div>
+
+                            @if (product.OldPrice != 0)
+                            {
+                                <div>
+                                    <p class="text-white text-opacity-75 text-center mb-0"><span>@product.Price.ToString("c")</span></p>
+                                    <p class="text-white text-opacity-75 text-center"><span class="text-decoration-line-through">@product.OldPrice.ToString("c")</span></p>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="pb-4 pt-3">
+                                    <p class="text-white text-opacity-75 text-center mb-0"><span>@product.Price.ToString("c")</span></p>
+                                </div>
+
+                            }
+                        </div>
+                        <div>
+                            <a asp-area="Customer" asp-controller="Home" asp-action="Details" asp-route-id="@product.Id" class="btn btn-outline-primary border-0 form-control">
+                                Больше о товаре
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
 </div>
