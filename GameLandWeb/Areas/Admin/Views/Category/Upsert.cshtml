@@ -34,16 +34,16 @@
                     <div class="col-6 col-md-3">
                         @if (Model.Id != 0)
                         {
-                            <button type="submit" class="btn btn-outline-success border form-control">Обновить</button>
+                            <button type="submit" class="btn btn-outline-success border form-control"><i class="bi bi-pencil-fill"></i>&nbsp; Обновить</button>
                         }
                         else
                         {
-                            <button type="submit" class="btn btn-outline-success border form-control">Добавить</button>
+                            <button type="submit" class="btn btn-outline-success border form-control"><i class="bi bi-plus-square"></i> &nbsp; Добавить</button>
                         }
                     </div>
                     <div class="col-6 col-md-3">
                         <a asp-controller="Category" asp-action="Index" class="btn btn-outline-danger border form-control">
-                            Назад к списку
+                            <i class="bi bi-arrow-bar-left"></i> &nbsp;Назад к списку
                         </a>
                     </div>
                 </div>

@@ -1,31 +1,7 @@
-﻿@model CategoriesAndProductsLists
-
-<div class="row mt-5">
-    <div class="col-2 nav-item dropdown">
-        <a class="dropdown-toggle text-white btn btn-outline-primary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Каталог товаров
-        </a>
-        <ul class="dropdown-menu bg-secondary shadow">
-
-            @foreach (var category in Model.categoriesList)
-            {
-                <li class="nav-item my-3 mx-5">
-                    <a class="nav-link hoverable-text btn-outline-light text-opacity-50 mx-115 text-center" asp-area="Customer" asp-controller="Home" asp-action="ProductListOfCategory" asp-route-id="@category.Id">@category.Name</a>
-                </li>
-                <li><hr class="dropdown-divider"></li>
-            }
-        </ul>
-    </div>
-    <dvi class="col-8"> 
-        <h1 class="text-primary-emphasis text-center py-2"></h1>
-    </dvi>
-    <dvi class="col-2">
-    </dvi>
-</div>
-
+﻿@model List<Product>
 
 <div class="row my-4 pb-5">
-    @foreach (var product in Model.productsList)
+    @foreach (var product in Model)
     {
         <div class="col-lg-3 col-sm-6">
             <div class="row p-2">
@@ -54,7 +30,7 @@
                         </div>
                         <div>
                             <a asp-area="Customer" asp-controller="Home" asp-action="Details" asp-route-id="@product.Id" class="btn btn-outline-primary border-0 form-control">
-                                Больше о товаре <i class="bi bi-box-arrow-in-right"></i>
+                                Больше о товаре
                             </a>
                         </div>
                     </div>

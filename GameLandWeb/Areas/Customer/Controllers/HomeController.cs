@@ -1,5 +1,6 @@
 ﻿using GameLand.DataAccess.Repository.IRepository;
 using GameLand.Models;
+using GameLand.Models.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -19,14 +20,31 @@ namespace GameLandWeb.Areas.Customer.Controllers
 
         public IActionResult Index()
         {
-            IEnumerable<Product> productList = _unitOfWork.Product.GetAll(includeProperties: "Category_of_product");
-            return View(productList);
+            CategoriesAndProductsLists categoriesAndproductsLists = new CategoriesAndProductsLists
+            {
+                categoriesList = _unitOfWork.Category.GetAll(),
+                productsList = _unitOfWork.Product.GetAll(includeProperties: "Category_of_product")
+            };
+            return View(categoriesAndproductsLists);
         }
 
         public IActionResult Details(int? id)
         {
             Product product = _unitOfWork.Product.Get(u => u.Id == id, includeProperties: "Category_of_product");
             return View(product);
+        }
+        public IActionResult ProductListOfCategory(int? id)
+        {
+            List<Product> categoryListFromBd = _unitOfWork.Product.GetAll().ToList();
+            List<Product> resultcategoryList = new List<Product>();
+            foreach(var product in categoryListFromBd)
+            {
+                if(product.CategoryId == id)
+                {
+                    resultcategoryList.Add(product);
+                }
+            }
+            return View(resultcategoryList);
         }
 
 
