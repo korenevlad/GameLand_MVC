@@ -1,5 +1,17 @@
 ﻿@model List<Product>
 
+<div class="row mt-5">
+    <div class="col-2 ">
+        <a class="text-white btn btn-outline-primary" asp-area="Customer" asp-controller="Home" asp-action="Index"><i class="bi bi-arrow-bar-left"></i>&nbsp;На главную</a>
+    </div>
+    <dvi class="col-8">
+        <h3 class="text-white text-opacity-25 text-center py-2">@Model[0].Category_of_product.Name</h3>
+    </dvi>
+    <dvi class="col-2">
+    </dvi>
+</div>
+
+
 <div class="row my-4 pb-5">
     @foreach (var product in Model)
     {

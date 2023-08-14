@@ -35,7 +35,7 @@ namespace GameLandWeb.Areas.Customer.Controllers
         }
         public IActionResult ProductListOfCategory(int? id)
         {
-            List<Product> categoryListFromBd = _unitOfWork.Product.GetAll().ToList();
+            List<Product> categoryListFromBd = _unitOfWork.Product.GetAll(includeProperties: "Category_of_product").ToList();
             List<Product> resultcategoryList = new List<Product>();
             foreach(var product in categoryListFromBd)
             {

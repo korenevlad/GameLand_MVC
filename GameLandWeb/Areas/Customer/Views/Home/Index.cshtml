@@ -1,23 +1,23 @@
 ﻿@model CategoriesAndProductsLists
 
 <div class="row mt-5">
-    <div class="col-2 nav-item dropdown">
+    <div class="col-2 nav-item dropdown-center">
         <a class="dropdown-toggle text-white btn btn-outline-primary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Каталог товаров
         </a>
-        <ul class="dropdown-menu bg-secondary shadow">
+        <ul class="dropdown-menu bg-body">
 
             @foreach (var category in Model.categoriesList)
             {
                 <li class="nav-item my-3 mx-5">
-                    <a class="nav-link hoverable-text btn-outline-light text-opacity-50 mx-115 text-center" asp-area="Customer" asp-controller="Home" asp-action="ProductListOfCategory" asp-route-id="@category.Id">@category.Name</a>
+                    <a class="text-center nav-link btn-outline-primary mx-auto" asp-area="Customer" asp-controller="Home" asp-action="ProductListOfCategory" asp-route-id="@category.Id">@category.Name</a>
                 </li>
                 <li><hr class="dropdown-divider"></li>
             }
         </ul>
     </div>
     <dvi class="col-8"> 
-        <h1 class="text-primary-emphasis text-center py-2"></h1>
+        <h1 class="text-white text-opacity-25 text-center py-2">G&nbsp;A&nbsp;M&nbsp;E&nbsp;L&nbsp;A&nbsp;N&nbsp;D</h1>
     </dvi>
     <dvi class="col-2">
     </dvi>
