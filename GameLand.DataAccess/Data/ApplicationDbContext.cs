@@ -1,4 +1,6 @@
 ﻿using GameLand.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -8,15 +10,18 @@ using System.Threading.Tasks;
 
 namespace GameLand.DataAccess.Data
 {
-    public class AplicationDbContext : DbContext
+    public class ApplicationDbContext : IdentityDbContext<IdentityUser>
     {
-        public AplicationDbContext(DbContextOptions<AplicationDbContext> options) : base(options) { }
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
         public DbSet<Category> CategoriesTable { get; set; }
         public DbSet<Product> ProductsTable { get; set; }
+        public DbSet<ApplicationUser> AplicationUsers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+
             modelBuilder.Entity<Category>().HasData(
                 new Category { Id = 1, Name = "Игровые ноутбуки", Code = "#A1", Description = "null" },
                 new Category { Id = 2, Name = "Игровые системные блоки", Code = "#A2", Description = "null" },

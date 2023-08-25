@@ -11,8 +11,8 @@ namespace GameLand.DataAccess.Repository
 {
     public class CategoryRepository : Repository<Category>, ICategoryRepository
     {
-        private readonly AplicationDbContext _db;
-        public CategoryRepository(AplicationDbContext db) : base(db)
+        private readonly ApplicationDbContext _db;
+        public CategoryRepository(ApplicationDbContext db) : base(db)
         {
             _db = db;
         }

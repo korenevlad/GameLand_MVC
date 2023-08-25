@@ -12,9 +12,9 @@ namespace GameLand.DataAccess.Repository
 {
     public class Repository<T> : IRepository<T> where T : class
     {
-        private readonly AplicationDbContext _db;
+        private readonly ApplicationDbContext _db;
         internal DbSet<T> _dbSet;
-        public Repository(AplicationDbContext db)
+        public Repository(ApplicationDbContext db)
         {
             _db = db;
             _dbSet = _db.Set<T>();

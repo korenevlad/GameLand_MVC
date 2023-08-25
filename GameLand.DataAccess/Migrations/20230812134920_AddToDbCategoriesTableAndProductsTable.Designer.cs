@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace GameLand.DataAccess.Migrations
 {
-    [DbContext(typeof(AplicationDbContext))]
+    [DbContext(typeof(ApplicationDbContext))]
     [Migration("20230812134920_AddToDbCategoriesTableAndProductsTable")]
     partial class AddToDbCategoriesTableAndProductsTable
     {

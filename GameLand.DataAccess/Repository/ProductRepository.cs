@@ -11,8 +11,8 @@ namespace GameLand.DataAccess.Repository
 {
     public class ProductRepository : Repository<Product>, IProductRepository
     {
-        private readonly AplicationDbContext _db;
-        public ProductRepository(AplicationDbContext db): base(db)
+        private readonly ApplicationDbContext _db;
+        public ProductRepository(ApplicationDbContext db): base(db)
         {
             _db = db;
             
