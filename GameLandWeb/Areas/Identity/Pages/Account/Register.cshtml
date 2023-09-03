@@ -17,19 +17,43 @@
                     <hr />
                     <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
                     <div class="mb-3 col-md-12">
-                        <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="Email" />
+                        <input asp-for="Input.Email" class="form-control" autocomplete="off" aria-required="true" placeholder="Email" />
                         <span asp-validation-for="Input.Email" class="text-danger"></span>
                     </div>
                     <div class="mb-3 col-md-6">
-                        <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="Пароль" />
+                        <input asp-for="Input.Name" class="form-control" autocomplete="off" aria-required="true" placeholder="Имя" />
+                        <span asp-validation-for="Input.Name" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <input asp-for="Input.PhoneNumber" class="form-control" autocomplete="off" aria-required="true" placeholder="Номер телефона" />
+                        <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <input asp-for="Input.Password" class="form-control" autocomplete="off" aria-required="true" placeholder="Пароль" />
                         <span asp-validation-for="Input.Password" class="text-danger"></span>
                     </div>
                     <div class="mb-3 col-md-6">
-                        <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" placeholder="Подтверждение пароля" />
+                        <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="off" aria-required="true" placeholder="Подтверждение пароля" />
                         <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
                     </div>
-                    <div class="form-floating mb-3">
-                        <select asp-for="Input.Role" asp-items="@Model.Input.RoleList" class="form-select">
+                    <div class="mb-3 col-md-6">
+                        <input asp-for="Input.StreetAddress" class="form-control" autocomplete="off" aria-required="true" placeholder="Адрес" />
+                        <span asp-validation-for="Input.StreetAddress" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <input asp-for="Input.City" class="form-control" autocomplete="off" aria-required="true" placeholder="Город" />
+                        <span asp-validation-for="Input.City" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <input asp-for="Input.State" class="form-control" autocomplete="off" aria-required="true" placeholder="Страна" />
+                        <span asp-validation-for="Input.State" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <input asp-for="Input.PostalCode" class="form-control" autocomplete="off" aria-required="true" placeholder="Почтовый индекс" />
+                        <span asp-validation-for="Input.PostalCode" class="text-danger"></span>
+                    </div>
+                    <div class="form-floating mb-3 col-md-6">
+                        <select asp-for="Input.Role" asp-items="@Model.Input.RoleList" class="form-select col-md-6">
                             <option disabled selected>--Выбор доступа--</option>
                         </select>
                     </div>
